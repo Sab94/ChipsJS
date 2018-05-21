@@ -1,0 +1,219 @@
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --gradient: linear-gradient(60deg, #2E3152, #5E64BB);
+  --light: #fff;
+  --shadow: 0 5px 5px 0 rgba(0,0,0,.25);
+  --hover: 0 5px 5px 0 rgba(0,0,0,.45);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  color: var(--light);
+}
+
+body {
+  margin: 0;
+  background: var(--primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  height: 100%;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+pre code {
+  display: block;
+  padding: 10px;
+  color: #333;
+  background: #f8f8ff;
+  font-size: inherit;
+  white-space: pre-wrap;
+  border-radius: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-bordered {
+  border: 1px solid var(--dark);
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>td {
+  border: 1px solid var(--dark);
+}
+/*Index Start*/
+.wrapper {
+  display: grid;
+  grid-template-areas: "header"
+                       "banner"
+                       "main"
+                       "footer";
+  grid-template-rows: auto 370px 1fr 80px;
+}
+header {
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px;
+  background: #673ab7;
+  z-index: 2;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.nav-item {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 88px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 2px;
+  overflow: visible;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--light);
+}
+.nav-item:hover, .active {
+  background: #4d2298ba;
+}
+
+.banner {
+  background: #673ab7;
+  display: grid;
+  grid-area: banner;
+}
+.project-name {
+  font-size: 56px;
+  font-weight: lighter;
+  line-height: 56px;
+  margin: 30px 5px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+.project-tagline {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 10px 0 25px;
+  font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.banner .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.banner .btn {
+  text-decoration: none;
+  color: var(--light);
+  height: 50px;
+  width: 150px;
+  background: transparent;
+  border: 2px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+.main {
+  color: var(--dark);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  grid-area: main;
+} 
+
+
+.main .description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 10px 0 25px;
+  font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+footer {
+  grid-area: footer;
+  color: var(--light);
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #673ab7;
+  padding: 12px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--light);
+}
+/*Index End*/
+
+/* Doc Start */
+.doc .main, .eg .main {
+  align-items: flex-start;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* Doc End */
+
+@media (max-width: 515px) {
+  .index-wrapper {
+      top: 88px;
+  }
+
+  .banner .btn-container {
+    flex-direction: column;    
+  }
+}
+
+@media (max-width: 700px) {
+  pre, table {
+    font-size: 10px;
+  }
+}
