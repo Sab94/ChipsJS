@@ -1,0 +1,71 @@
+.chip-body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 2px 0 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.chip-md > .chip-body{
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+  outline: 0;
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 24px;
+  align-items: center;
+  cursor: default;
+  border: unset;
+  line-height: 10px;
+}
+.chip-text {
+  padding-right: 10px;
+}
+.chip-closebtn {
+    float: right;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.chip-closebtn img {
+  width: 15px;
+  margin: 2px;
+}
+
+.chip-closebtn:hover {
+    color: #000;
+}
+
+.chip-wrapper{
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    min-height: 32px;
+    width: 100%;
+}
+.chip-input{
+    background: transparent;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: textfield;
+    box-sizing: border-box;
+    font-size: 100%;
+    margin-top: 5px;
+    padding: 0;
+}
+
